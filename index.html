@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- WAP to print the minimum prime number in the given number -->
+    <script>
+        number=prompt("Enter a number:")
+        first="yes";
+        for(num of number){
+            if(num>1){
+                divide=0;
+                for(i=2;i<num;i++){
+                    if(num%i==0){
+                        divide++
+                    }
+                    if(divide==1){
+                        break;
+                    }
+                }
+                if(divide==0){
+                    if(first=="yes"){
+                        min=num;
+                        first="No"
+                    }
+                    if(num<min){
+                        min=num
+                    }
+                }
+            }
+        }
+        console.log("minimum prime number in the given number:" +min);
+    </script>
+
+    <!-- WAP to print the sum of non prime numbers -->
+    <script>
+        number=prompt("Enter a number:");
+        s=0
+        for(num of number){
+            if(num>1){
+                divide=0
+                for(i=2;i<num;i++){
+                    if(num%i==0){
+                        divide++
+                    }
+                    if(divide==1){
+                        s=s+Number(num)
+                        break
+                    }
+                }
+            }
+        }
+        console.log("sum of non prime numbers:" +s);
+    </script>
+
+<!-- WAP to print the sum of non prime odd numbers -->
+    <script>
+        num=prompt("Enter a number:");
+        s=0;
+        for(i of num){
+            for(j=2;j<i;j++){
+                if(i%j==0){
+                    if(i%2!=0){
+                        s=s+Number(i)
+                    }
+                }
+            }
+        }
+        console.log("sum of non prime odd numbers:" +s);
+    </script>
+</body>
+</html>
